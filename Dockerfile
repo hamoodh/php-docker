@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:12.04
 MAINTAINER PHP <hamoodh@xerago.com>
 
 # Install packages
