@@ -22,7 +22,9 @@ RUN chmod 755 /*.sh
 ADD supervisord-apache2.conf /etc/supervisor/conf.d/supervisord-apache2.conf
 
 # Configure /app folder
-RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html
+#RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html
+RUN mkdir -p /var/www/html/
+COPY app/ /var/www/html/
 
 EXPOSE 80
 CMD ["/run.sh"]
